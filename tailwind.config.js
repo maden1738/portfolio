@@ -13,7 +13,7 @@ export default {
         background: "#10002B",
         primary: "#9D4EDD",
         secondary: "#DFA8FF",
-        accent: "#203FC9",
+        accent: "#A6CEA5",
         text: "#E0AAFF",
       },
     },
