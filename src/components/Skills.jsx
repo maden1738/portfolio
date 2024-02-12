@@ -34,7 +34,7 @@ export default function Skills() {
     { name: "typescript", logo: <SiTypescript /> },
   ];
   return (
-    <div className="mt-4 grid gap-4 lg:grid-cols-8">
+    <div className="wrapper grid gap-4 md:grid-cols-5 lg:grid-cols-8">
       {skills.map((skill) => {
         return (
           <div className="hover:text-text flex flex-col items-center justify-center text-white">

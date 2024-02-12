@@ -2,13 +2,15 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import hero from "./assets/layered-peaks-haikei.svg";
 import peaks from "./assets/stacked-peaks.svg";
 import wave from "./assets/wave-haikei-2.svg";
+import stackedWave from "./assets/stacked-waves-haikei-2.svg";
 import "./App.css";
 import Skills from "./components/Skills";
+import Project from "./Projects";
 
 function App() {
   return (
     <div className="font-montserrat">
-      <Parallax pages={3}>
+      <Parallax pages={4}>
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -21,8 +23,18 @@ function App() {
         <ParallaxLayer
           offset={1}
           speed={1}
+          factor={1}
           style={{
             backgroundImage: `url(${wave})`,
+            backgroundSize: "cover",
+          }}
+        />
+        <ParallaxLayer
+          offset={1.9}
+          speed={1}
+          factor={1}
+          style={{
+            backgroundImage: `url(${stackedWave})`,
             backgroundSize: "cover",
           }}
         />
@@ -47,7 +59,7 @@ function App() {
             </div>
           </section>
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0.05} factor={0.75}>
+        <ParallaxLayer offset={1} speed={0.05} factor={1}>
           <div className="wrapper font-montserrat text-white">
             <h2 className=" text-4xl">Skills and Tools</h2>
             <p className="text-accent my-4">
@@ -55,9 +67,8 @@ function App() {
               life:
             </p>
           </div>
-          <div className="wrapper">
-            <Skills />
-          </div>
+          <Skills />
+          <Project />
         </ParallaxLayer>
       </Parallax>
     </div>

@@ -8,6 +8,14 @@ body {
 
 @layer components {
   .wrapper {
-    @apply mx-auto w-full  px-[5%] md:px-[8%] lg:px-[10%] xl:px-[15%];
+    @apply mx-auto w-full  px-[5%] md:px-[8%] lg:px-[5vw] xl:px-[12vw]  2xl:px-[20vw];
+  }
+
+  .tech {
+    @apply bg-secondary cursor-default rounded-lg p-1 text-[0.75rem] text-gray-950;
+  }
+
+  .demo {
+    @apply bg-accent rounded-md p-2 text-gray-950;
   }
 }
