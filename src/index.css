@@ -12,10 +12,10 @@ body {
   }
 
   .tech {
-    @apply bg-secondary cursor-default rounded-lg p-1 text-[0.75rem] text-gray-950;
+    @apply text-black2 cursor-default rounded-lg bg-primary px-2 py-1 text-[0.75rem]  font-medium;
   }
 
   .demo {
-    @apply bg-accent rounded-md p-2 text-gray-950;
+    @apply rounded-md bg-accent px-2 py-0.5 text-gray-950;
   }
 }

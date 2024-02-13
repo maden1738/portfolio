@@ -46,19 +46,21 @@ export default function Projects() {
   ];
   return (
     <>
-      <div className="wrapper mt-[10rem] text-4xl text-white">My Projects</div>
+      <div className="wrapper mt-[10rem] text-4xl font-bold text-white">
+        My Projects
+      </div>
       {projects.map((project) => {
         return (
           <>
             <div className="wrapper mt-[4rem] ">
-              <div className="flex gap-8">
-                <img
-                  src={project.image}
-                  alt=""
-                  className="w-[50%] rounded-md"
-                />
-                <div className="flex flex-col justify-center">
-                  <p className="text-3xl text-white">{project.name}</p>
+              <div className="grid grid-cols-2 gap-8">
+                <section className="">
+                  <img src={project.image} alt="" className="rounded-md" />
+                </section>
+                <section className="flex flex-col justify-center">
+                  <p className="text-3xl font-medium text-white">
+                    {project.name}
+                  </p>
                   <div className="mt-3 flex gap-2">
                     {project.techs.map((tech) => {
                       return (
@@ -70,69 +72,33 @@ export default function Projects() {
                       );
                     })}
                   </div>
-                  <div className="text-text mt-4">{project.description}</div>
+                  <div className="mt-4 text-text">{project.description}</div>
                   <div className="mt-4 flex gap-3">
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <button className="demo">Live Demo</button>
+                      <button className="demo text-black2 font-medium">
+                        Live Demo
+                      </button>
                     </a>
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <button className="demo">Github</button>
+                      <button className="demo text-black2 font-medium">
+                        Github
+                      </button>
                     </a>
                   </div>
-                </div>
+                </section>
               </div>
             </div>
           </>
         );
       })}
-
-      {/* <div className="wrapper mt-[10rem] text-4xl text-white">My Projects</div>
-      <div className="wrapper mt-[4rem] ">
-        <div className="flex gap-8">
-          <img src={hekto} alt="" className="w-[50%] rounded-md" />
-          <div className="flex flex-col justify-center">
-            <p className="text-3xl text-white">E-commerce Site</p>
-            <div className="mt-3 flex gap-2">
-              <button className="tech" type="button">
-                MERN
-              </button>
-              <button className="tech" type="button">
-                redux
-              </button>
-            </div>
-            <div className="text-text mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-              dolorem consectetur reprehenderit, et eos iste dolor veniam quas
-              delectus ea blanditiis aliquid, sunt, nemo repellendus quidem
-              incidunt beatae quisquam totam.
-            </div>
-            <div className="mt-4 flex gap-3">
-              <a
-                href="https://hekto-psi.vercel.app/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <button className="demo">Live Demo</button>
-              </a>
-              <a
-                href="https://github.com/maden1738/hekto"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <button className="demo">Github</button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }

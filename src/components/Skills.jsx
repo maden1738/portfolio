@@ -37,7 +37,7 @@ export default function Skills() {
     <div className="wrapper grid gap-4 md:grid-cols-5 lg:grid-cols-8">
       {skills.map((skill) => {
         return (
-          <div className="hover:text-text flex flex-col items-center justify-center text-white">
+          <div className="flex flex-col items-center justify-center text-white hover:text-accent">
             <div className="mt-4 text-[4rem]">{skill.logo}</div>
             <div>{skill.name}</div>
           </div>
