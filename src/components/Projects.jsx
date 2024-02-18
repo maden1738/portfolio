@@ -1,9 +1,10 @@
 import React from "react";
-import hekto from "./assets/hekto.png";
-import tenzies from "./assets/tenzies.png";
-import codepen from "./assets/codepen.png";
-import finance from "./assets/finance.png";
+import hekto from "../assets/hekto.png";
+import tenzies from "../assets/tenzies.png";
+import codepen from "../assets/codepen.png";
+import finance from "../assets/finance.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   let projects = [
@@ -46,18 +47,35 @@ export default function Projects() {
   ];
   return (
     <>
-      <div className="wrapper mt-[10rem] text-4xl font-bold text-white">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="wrapper mt-[10rem] text-4xl font-bold text-white"
+      >
         My Projects
-      </div>
+      </motion.div>
       {projects.map((project) => {
         return (
           <>
-            <div className="wrapper mt-[4rem] ">
+            <div className="wrapper mt-[4rem]">
               <div className="grid grid-cols-2 gap-8">
-                <section className="">
+                <motion.section
+                  className=""
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
                   <img src={project.image} alt="" className="rounded-md" />
-                </section>
-                <section className="flex flex-col justify-center">
+                </motion.section>
+                <motion.section
+                  className="flex flex-col justify-center "
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  viewport={{ once: true }}
+                >
                   <p className="text-3xl font-medium text-white">
                     {project.name}
                   </p>
@@ -93,7 +111,7 @@ export default function Projects() {
                       </button>
                     </a>
                   </div>
-                </section>
+                </motion.section>
               </div>
             </div>
           </>

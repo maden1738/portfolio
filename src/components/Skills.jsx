@@ -16,6 +16,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { AiOutlineConsoleSql } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   let skills = [
@@ -33,14 +34,36 @@ export default function Skills() {
     { name: "python", logo: <FaPython /> },
     { name: "typescript", logo: <SiTypescript /> },
   ];
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.05 * index,
+      },
+    }),
+  };
+
   return (
     <div className="wrapper grid gap-4 md:grid-cols-5 lg:grid-cols-8">
-      {skills.map((skill) => {
+      {skills.map((skill, index) => {
         return (
-          <div className="flex flex-col items-center justify-center text-white hover:text-accent">
+          <motion.div
+            key={index}
+            className="flex flex-col items-center justify-center text-white hover:text-accent"
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={index}
+          >
             <div className="mt-4 text-[4rem]">{skill.logo}</div>
             <div>{skill.name}</div>
-          </div>
+          </motion.div>
         );
       })}
     </div>
