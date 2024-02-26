@@ -51,6 +51,7 @@ export default function Projects() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
+        viewport={{ once: true }}
         className="wrapper mt-[10rem] text-4xl font-bold text-white"
       >
         My Projects
@@ -59,9 +60,9 @@ export default function Projects() {
         return (
           <>
             <div className="wrapper mt-[4rem]">
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 grid-rows-1 gap-8">
                 <motion.section
-                  className=""
+                  className="place-self-center"
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
@@ -97,7 +98,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <button className="demo text-black2 font-medium">
+                      <button className="demo font-medium text-black2">
                         Live Demo
                       </button>
                     </a>
@@ -106,7 +107,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <button className="demo text-black2 font-medium">
+                      <button className="demo font-medium text-black2">
                         Github
                       </button>
                     </a>

@@ -85,11 +85,11 @@ function App() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <span className=" text-black2 text-3xl font-bold group-hover:text-text">
+              <span className=" text-3xl font-bold text-black2 group-hover:text-text">
                 Kantipur Engineering College
               </span>
             </a>
-            <span className="text-black2 font-mono text-xl uppercase">
+            <span className="font-mono text-xl uppercase text-black2">
               bachelor's in computer engineering
             </span>
             <span>2020-2024</span>
@@ -98,19 +98,19 @@ function App() {
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="group mt-[2rem] flex w-fit flex-col items-center gap-2 rounded-lg bg-primary p-9 hover:bg-opacity-90"
+            viewport={{ once: true }}
+            className="group mt-[2rem] flex w-fit flex-col items-center gap-2 rounded-lg bg-primary p-9 shadow-lg hover:scale-75 hover:bg-opacity-90 "
           >
             <a
               href="https://www.sxc.edu.np"
               target="_blank"
               rel="noreferrer noopener"
-              viewport={{ once: true }}
             >
-              <span className=" text-black2 text-3xl font-bold group-hover:text-text">
+              <span className=" text-3xl font-bold text-black2 group-hover:text-text">
                 St. Xavier's College
               </span>
             </a>
-            <span className="text-black2 font-mono text-xl uppercase ">
+            <span className="font-mono text-xl uppercase text-black2 ">
               Higher Secondary education board
             </span>
             <span>2018-2020</span>
@@ -128,7 +128,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaGithub className="text-2xl" />
+                <FaGithub className="text-2xl hover:text-accent" />
               </a>
             </li>
             <li>
@@ -137,7 +137,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaLinkedin className="text-2xl" />
+                <FaLinkedin className="text-2xl hover:text-accent" />
               </a>
             </li>
             <li>
@@ -146,7 +146,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaXTwitter className="text-2xl" />
+                <FaXTwitter className="text-2xl hover:text-accent" />
               </a>
             </li>
             <li>
@@ -155,7 +155,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaFacebook className="text-2xl" />
+                <FaFacebook className="text-2xl hover:text-accent" />
               </a>
             </li>
           </ul>
