@@ -39,7 +39,7 @@ body {
   }
 
   .wrapper {
-    @apply mx-auto w-full px-[5%] md:px-[8%] lg:px-[5vw] xl:px-[12vw]  2xl:px-[20vw];
+    @apply mx-auto w-full px-[7%] md:px-[8%] lg:px-[5vw] xl:px-[12vw]  2xl:px-[20vw];
   }
 
   .tech {

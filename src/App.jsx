@@ -10,12 +10,12 @@ function App() {
   return (
     <main className="overflow-hidden font-montserrat">
       <motion.main className="h-screen bg-[url('./assets/Layer.svg')] bg-cover">
-        <nav className="wrapper font-lato absolute top-[5vh]  text-lg font-medium text-text">
-          <ul className="flex justify-center gap-9 sm:gap-1">
+        <nav className="wrapper font-lato absolute top-6  text-base font-medium text-text md:top-[2rem] md:text-lg lg:top-[5vh]">
+          <ul className="flex justify-center gap-4 md:gap-9">
             <li>
               <a
                 href="#technologies"
-                className="hover-underline-animation hover:text-accent"
+                className="hover-underline-animation  hover:text-accent"
               >
                 Skills
               </a>
@@ -23,7 +23,7 @@ function App() {
             <li>
               <a
                 href="#projects"
-                className="hover-underline-animation hover:text-accent"
+                className="hover-underline-animation  hover:text-accent"
               >
                 Projects
               </a>
@@ -31,7 +31,7 @@ function App() {
             <li>
               <a
                 href="#education"
-                className="hover-underline-animation hover:text-accent"
+                className="hover-underline-animation  hover:text-accent"
               >
                 Education
               </a>
@@ -39,19 +39,19 @@ function App() {
             <li>
               <a
                 href="#contact"
-                className="hover-underline-animation hover:text-accent"
+                className="hover-underline-animation  hover:text-accent"
               >
-                Contact Me
+                Contact me
               </a>
             </li>
           </ul>
         </nav>
-        <section className="wrapper grid  grid-cols-2 font-montserrat">
+        <section className="wrapper inline  grid-cols-2 font-montserrat md:grid">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-[25vh]  font-montserrat text-4xl text-white"
+            className="mt-[5rem] text-center font-montserrat text-4xl text-white md:mt-[25vh] md:text-left"
           >
             Namaste 🙏
           </motion.div>
@@ -59,7 +59,7 @@ function App() {
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-[25vh] h-fit border-l-4 pl-4 text-white "
+            className="mt-[3rem] h-fit px-5 text-white md:mt-[20vh] md:border-l-4  md:pl-4 lg:mt-[25vh]"
           >
             <p>I'm </p>
             <p className="text-4xl">Swarna Jang Maden</p>
@@ -82,7 +82,7 @@ function App() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className="wrapper mt-[7rem] font-montserrat text-white "
+          className="wrapper mt-9 font-montserrat text-white md:mt-[7rem]"
           viewport={{ once: true }}
         >
           <h2 className="marker-underline text-4xl font-bold" id="technologies">
@@ -97,7 +97,7 @@ function App() {
         <Project />
         <div className="wrapper flex flex-col items-center font-montserrat text-white">
           <motion.p
-            className="mt-[8rem] text-center text-4xl font-bold"
+            className="mt-11 text-center text-4xl font-bold md:mt-[8rem]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.3 }}
@@ -114,7 +114,7 @@ function App() {
             onClick={() => {
               window.open("https://kec.edu.np/", "_blank");
             }}
-            className="group mt-[3rem] flex w-fit flex-col items-center gap-2 rounded-lg border-solid bg-primary p-9  hover:cursor-pointer hover:bg-opacity-90"
+            className="group mt-[1rem] flex w-fit flex-col items-center gap-2 rounded-lg border-solid bg-primary p-9 text-center  hover:cursor-pointer hover:bg-opacity-90 md:mt-[3rem]"
           >
             <span className=" text-3xl font-bold text-black2 group-hover:text-text">
               Kantipur Engineering College
@@ -132,7 +132,7 @@ function App() {
             onClick={() => {
               window.open("https://www.sxc.edu.np/", "_blank");
             }}
-            className="group mt-[2rem] flex w-fit flex-col items-center gap-2 rounded-lg bg-primary p-9 shadow-lg hover:scale-75 hover:cursor-pointer hover:bg-opacity-90"
+            className=" group mt-4 flex w-fit flex-col items-center gap-2 rounded-lg bg-primary p-9 text-center shadow-lg hover:scale-75 hover:cursor-pointer hover:bg-opacity-90 md:mt-[2rem]"
           >
             <span className=" text-3xl font-bold text-black2 group-hover:text-text">
               St. Xavier's College
@@ -145,12 +145,14 @@ function App() {
         </div>
       </main>
       <div
-        className="wrapper mt-[8rem] flex flex-col items-center text-white"
+        className="wrapper mt-11 flex flex-col items-center text-white  md:mt-[6rem]"
         id="contact"
       >
         <h1 className="text-center text-4xl font-bold">Contact me 👋👋</h1>
-        <div className="  mb-[2rem] mt-[1rem] rounded-lg border border-x-purple-400 border-y-purple-800 p-8">
-          <span className=" text-2xl  ">limbujungmaden@gmail.com</span>
+        <div className="mb-[2rem] mt-[1rem] rounded-lg border border-x-purple-400 border-y-purple-800 p-6 md:p-8 ">
+          <p className=" text-center text-lg md:text-2xl">
+            limbujungmaden@gmail.com
+          </p>
           <ul className="mt-5 flex justify-center gap-10">
             <li>
               <a

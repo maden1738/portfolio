@@ -49,19 +49,19 @@ export default function Skills() {
   };
 
   return (
-    <div className="wrapper grid gap-4 md:grid-cols-5 lg:grid-cols-8">
+    <div className="wrapper grid grid-cols-4 md:grid-cols-5 md:gap-4 lg:grid-cols-8">
       {skills.map((skill, index) => {
         return (
           <motion.div
             key={index}
-            className="flex flex-col items-center justify-center text-white hover:text-accent"
+            className="flex flex-col items-center justify-center text-white hover:md:text-accent"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             custom={index}
           >
-            <div className="mt-4 text-[4rem]">{skill.logo}</div>
+            <div className="mt-4 text-[2rem] md:text-[4rem]">{skill.logo}</div>
             <div>{skill.name}</div>
           </motion.div>
         );
