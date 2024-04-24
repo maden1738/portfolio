@@ -9,14 +9,9 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <main className="overflow-hidden font-montserrat">
-      <motion.main
-        // initial={{ opacity: 0 }}
-        // animate={{ opacity: 1 }}
-        // transition={{ duration: 1 }}
-        className="h-screen bg-[url('./assets/layered-peaks-haikei.svg')] bg-cover"
-      >
+      <motion.main className="h-screen bg-[url('./assets/Layer.svg')] bg-cover">
         <nav className="wrapper font-lato absolute top-[5vh]  text-lg font-medium text-text">
-          <ul className="flex justify-end gap-9">
+          <ul className="flex justify-center gap-9">
             <li>
               <a
                 href="#technologies"
@@ -75,8 +70,9 @@ function App() {
               technology.
             </p>
             <p className="mt-1 text-text">
-              Join me on this journey as we turn ideas into reality, one line of
-              code at a time 👋 👋
+              Eager to contribute to a company where I can apply my technical
+              skills to deliver business value while simultaneously enhancing my
+              skills as a developer.
             </p>
           </motion.div>
         </section>
@@ -86,11 +82,11 @@ function App() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className="wrapper mt-[9rem] font-montserrat text-white "
+          className="wrapper mt-[7rem] font-montserrat text-white "
           viewport={{ once: true }}
         >
           <h2 className="marker-underline text-4xl font-bold" id="technologies">
-            Technologies
+            Skills & Technologies
           </h2>
           <p className="my-4 text-accent">
             The skills, tools and technologies I use to bring your products to
@@ -104,7 +100,7 @@ function App() {
             className="mt-[8rem] text-center text-4xl font-bold"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.3 }}
             viewport={{ once: true }}
             id="education"
           >
@@ -113,19 +109,16 @@ function App() {
           <motion.section
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="group mt-[3rem] flex w-fit flex-col items-center gap-2 rounded-lg border-solid bg-primary p-9  hover:bg-opacity-90"
+            onClick={() => {
+              window.open("https://kec.edu.np/", "_blank");
+            }}
+            className="group mt-[3rem] flex w-fit flex-col items-center gap-2 rounded-lg border-solid bg-primary p-9  hover:cursor-pointer hover:bg-opacity-90"
           >
-            <a
-              href="https://kec.edu.np/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <span className=" text-3xl font-bold text-black2 group-hover:text-text">
-                Kantipur Engineering College
-              </span>
-            </a>
+            <span className=" text-3xl font-bold text-black2 group-hover:text-text">
+              Kantipur Engineering College
+            </span>
             <span className="font-mono text-xl uppercase text-black2">
               bachelor's in computer engineering
             </span>
@@ -134,23 +127,17 @@ function App() {
           <motion.section
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="group mt-[2rem] flex w-fit flex-col items-center gap-2 rounded-lg bg-primary p-9 shadow-lg hover:scale-75 hover:bg-opacity-90 "
+            className="group mt-[2rem] flex w-fit flex-col items-center gap-2 rounded-lg bg-primary p-9 shadow-lg hover:scale-75 hover:cursor-pointer hover:bg-opacity-90"
           >
-            <a
-              href="https://www.sxc.edu.np"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <span className=" text-3xl font-bold text-black2 group-hover:text-text">
-                St. Xavier's College
-              </span>
-            </a>
+            <span className=" text-3xl font-bold text-black2 group-hover:text-text">
+              St. Xavier's College
+            </span>
             <span className="font-mono text-xl uppercase text-black2 ">
               Higher Secondary education board
             </span>
-            <span>2018-2020</span>
+            <span>2017-2019</span>
           </motion.section>
         </div>
       </main>
@@ -160,15 +147,15 @@ function App() {
       >
         <h1 className="text-center text-4xl font-bold">Contact me 👋👋</h1>
         <div className="  mb-[2rem] mt-[1rem] rounded-lg border border-x-purple-400 border-y-purple-800 p-8">
-          <span className="text-2xl">limbujungmaden@gmail.com</span>
-          <ul className="mt-3 flex justify-center gap-6">
+          <span className=" text-2xl  ">limbujungmaden@gmail.com</span>
+          <ul className="mt-5 flex justify-center gap-10">
             <li>
               <a
                 href="https://github.com/maden1738"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaGithub className="text-2xl hover:text-accent" />
+                <FaGithub className="text-4xl hover:text-accent" />
               </a>
             </li>
             <li>
@@ -177,7 +164,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaLinkedin className="text-2xl hover:text-accent" />
+                <FaLinkedin className="text-4xl hover:text-accent" />
               </a>
             </li>
             <li>
@@ -186,7 +173,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaXTwitter className="text-2xl hover:text-accent" />
+                <FaXTwitter className="text-4xl hover:text-accent" />
               </a>
             </li>
             <li>
@@ -195,7 +182,7 @@ function App() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FaFacebook className="text-2xl hover:text-accent" />
+                <FaFacebook className="text-4xl hover:text-accent" />
               </a>
             </li>
           </ul>
