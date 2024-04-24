@@ -3,7 +3,6 @@ import hekto from "../assets/hekto.png";
 import tenzies from "../assets/tenzies.png";
 import codepen from "../assets/codepen.png";
 import finance from "../assets/finance.png";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Projects() {
@@ -46,20 +45,20 @@ export default function Projects() {
     },
   ];
   return (
-    <>
+    <div className="wrapper" id="projects">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
         viewport={{ once: true }}
-        className="wrapper mt-[10rem] text-4xl font-bold text-white"
+        className=" mt-[9rem] text-4xl font-bold text-white"
       >
         My Projects
       </motion.div>
       {projects.map((project) => {
         return (
           <>
-            <div className="wrapper mt-[4rem]">
+            <div className=" mt-[4rem]">
               <div className="grid grid-cols-2 grid-rows-1 gap-8">
                 <motion.section
                   className="place-self-center"
@@ -118,6 +117,6 @@ export default function Projects() {
           </>
         );
       })}
-    </>
+    </div>
   );
 }

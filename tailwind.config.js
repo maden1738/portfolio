@@ -8,6 +8,7 @@ export default {
       },
       fontFamily: {
         montserrat: " 'Montserrat', sans-serif",
+        lato: " 'Lato', sans-serif",
       },
       colors: {
         background: "#10002B",

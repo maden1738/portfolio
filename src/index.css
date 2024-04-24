@@ -1,5 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #10002b;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
 }
 
 @tailwind base;
@@ -7,12 +34,16 @@ body {
 @tailwind utilities;
 
 @layer components {
+  .gradient-underline {
+    @apply max-w-max bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:100%_3px] bg-bottom bg-no-repeat;
+  }
+
   .wrapper {
     @apply mx-auto w-full px-[5%] md:px-[8%] lg:px-[5vw] xl:px-[12vw]  2xl:px-[20vw];
   }
 
   .tech {
-    @apply text-black2 cursor-default rounded-lg bg-primary px-2 py-1 text-[0.75rem]  font-medium;
+    @apply cursor-default rounded-lg bg-primary px-2 py-1 text-[0.75rem] font-medium  text-black2;
   }
 
   .demo {

@@ -1,5 +1,3 @@
-import hero from "./assets/layered-peaks-haikei.svg";
-import wave from "./assets/wave-haikei-2.svg";
 import "./App.css";
 import Skills from "./components/Skills";
 import Project from "./components/Projects";
@@ -17,6 +15,42 @@ function App() {
         // transition={{ duration: 1 }}
         className="h-screen bg-[url('./assets/layered-peaks-haikei.svg')] bg-cover"
       >
+        <nav className="wrapper font-lato absolute top-[5vh]  text-lg font-medium text-text">
+          <ul className="flex justify-end gap-9">
+            <li>
+              <a
+                href="#technologies"
+                className="hover-underline-animation hover:text-accent"
+              >
+                Skills & Technologies
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                className="hover-underline-animation hover:text-accent"
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#education"
+                className="hover-underline-animation hover:text-accent"
+              >
+                Education
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="hover-underline-animation hover:text-accent"
+              >
+                Contact Me
+              </a>
+            </li>
+          </ul>
+        </nav>
         <section className="wrapper grid  grid-cols-2 font-montserrat">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -52,10 +86,12 @@ function App() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className="wrapper mt-[10rem] font-montserrat text-white "
+          className="wrapper mt-[9rem] font-montserrat text-white "
           viewport={{ once: true }}
         >
-          <h2 className=" text-4xl font-bold">Skills and Tools</h2>
+          <h2 className="marker-underline text-4xl font-bold" id="technologies">
+            Technologies
+          </h2>
           <p className="my-4 text-accent">
             The skills, tools and technologies I use to bring your products to
             life:
@@ -70,6 +106,7 @@ function App() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             viewport={{ once: true }}
+            id="education"
           >
             Formal Education
           </motion.p>
@@ -117,7 +154,10 @@ function App() {
           </motion.section>
         </div>
       </main>
-      <div className="wrapper mt-[8rem] flex flex-col items-center text-white">
+      <div
+        className="wrapper mt-[8rem] flex flex-col items-center text-white"
+        id="contact"
+      >
         <h1 className="text-center text-4xl font-bold">Contact me 👋👋</h1>
         <div className="  mb-[2rem] mt-[1rem] rounded-lg border border-x-purple-400 border-y-purple-800 p-8">
           <span className="text-2xl">limbujungmaden@gmail.com</span>
