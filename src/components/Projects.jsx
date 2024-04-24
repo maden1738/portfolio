@@ -10,9 +10,9 @@ export default function Projects() {
     {
       name: "E-commerce site",
       image: hekto,
-      techs: ["MERN", "redux"],
+      techs: ["React", "NodeJS", "Express", "MongoDB", "Redux"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, eum similique possimus a fuga omnis deleniti dolore sed, doloribus delectus quas, architecto voluptatem minima voluptatibus aliquid unde sapiente animi voluptatum?",
+        "A full stack ecommerce site based on MERN Stack. It is implemented through various express APIs and MongoDB data base. Front-end is built with React. Redux was used for state management",
       live: "https://hekto-psi.vercel.app/",
       github: "https://hekto-psi.vercel.app/",
     },
@@ -21,7 +21,7 @@ export default function Projects() {
       image: tenzies,
       techs: ["React"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, eum similique possimus a fuga omnis deleniti dolore sed, doloribus delectus quas, architecto voluptatem minima voluptatibus aliquid unde sapiente animi voluptatum?",
+        "A single player version of popular dice game Tenzies. It has additional feature of keeping track of personal highscore",
       live: "https://tenzies-amber-nine.vercel.app/",
       github: "https://github.com/maden1738/tenzies",
     },
@@ -30,17 +30,16 @@ export default function Projects() {
       image: codepen,
       techs: ["React"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, eum similique possimus a fuga omnis deleniti dolore sed, doloribus delectus quas, architecto voluptatem minima voluptatibus aliquid unde sapiente animi voluptatum?",
+        "Clone of popular website codepen. It is online code editor to write Html, Css and Js code on the browser",
       live: "https://codepen-clone-indol-seven.vercel.app/",
       github: "https://github.com/maden1738/codepenClone/tree/main",
     },
     {
       name: "Finance",
       image: finance,
-      techs: ["Flask", "SQL"],
+      techs: ["Flask", "SQL", "Python"],
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, eum similique possimus a fuga omnis deleniti dolore sed, doloribus delectus quas, architecto voluptatem minima voluptatibus aliquid unde sapiente animi voluptatum?",
-      live: "https://finance-ecru-alpha.vercel.app/",
+        "A basic portfolio site for buying, selling and keeping track of stocks",
       github: "https://github.com/maden1738/stocks",
     },
   ];

@@ -11,13 +11,13 @@ function App() {
     <main className="overflow-hidden font-montserrat">
       <motion.main className="h-screen bg-[url('./assets/Layer.svg')] bg-cover">
         <nav className="wrapper font-lato absolute top-[5vh]  text-lg font-medium text-text">
-          <ul className="flex justify-center gap-9">
+          <ul className="flex justify-center gap-9 sm:gap-1">
             <li>
               <a
                 href="#technologies"
                 className="hover-underline-animation hover:text-accent"
               >
-                Skills & Technologies
+                Skills
               </a>
             </li>
             <li>
@@ -129,6 +129,9 @@ function App() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
+            onClick={() => {
+              window.open("https://www.sxc.edu.np/", "_blank");
+            }}
             className="group mt-[2rem] flex w-fit flex-col items-center gap-2 rounded-lg bg-primary p-9 shadow-lg hover:scale-75 hover:cursor-pointer hover:bg-opacity-90"
           >
             <span className=" text-3xl font-bold text-black2 group-hover:text-text">
